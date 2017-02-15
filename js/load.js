@@ -9,6 +9,7 @@ let loadState = {
 		game.load.image(    'bullet', 'assets/bullet.png');
 		game.load.image('background', 'assets/fire.png');
 		game.load.audio(      'jump', 'assets/jump.wav');
+		game.load.audio(    'shotgun', 'assets/shotgun.wav');
 
 	},
 	create: () => game.state.start('menu')

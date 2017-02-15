@@ -25,6 +25,8 @@ let playState = {
 
 		this.jumpSound = game.add.audio('jump');
 
+		this.shotSound = game.add.audio('shotgun');
+
 		this.bullets = game.add.group();
 		this.bullets.enableBody = true;
 		this.bullets.physicsBodyType = Phaser.Physics.ARCADE;
@@ -73,6 +75,7 @@ let playState = {
 			this.bullet = this.bullets.getFirstDead();
 			this.bullet.reset(this.bird.x, this.bird.y);
 			game.physics.arcade.moveToXY(this.bullet, this.bird.x, this.bird.y, 300);
+			this.shotSound.play();
 		}
 	},
 
